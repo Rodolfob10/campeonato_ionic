@@ -1,0 +1,35 @@
+<ion-header>
+
+    <ion-navbar>
+      <ion-title>PartidasEdit</ion-title>
+    </ion-navbar>
+  
+  </ion-header>
+  
+  
+  <ion-content padding>
+  
+    <ion-list>
+  
+      <ion-item>
+        <ion-label stacked>Time 1</ion-label>
+        <ion-input type="text" name="time1" [(ngModel)]="partida.time1"></ion-input>
+      </ion-item>
+  
+      <ion-item>
+        <ion-label stacked>Time 2</ion-label>
+        <ion-input type="text" name="time2" [(ngModel)]="partida.time2"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label stacked>Local</ion-label>
+        <ion-input type="text" name="local" [(ngModel)]="partida.local"></ion-input>
+      </ion-item>
+  
+    </ion-list>
+
+
+  
+    <button ion-button block (click)="save()">Salvar</button>
+  
+  </ion-content>

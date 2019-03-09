@@ -1,0 +1,34 @@
+<ion-header>
+    <ion-navbar>
+      <ion-title>Partidas</ion-title>
+    </ion-navbar>
+  </ion-header>
+  
+  <ion-content>
+    <ion-list>
+      <ion-item-sliding *ngFor="let p of partidas">
+        <button ion-item (click)="editPartida(p.id)">
+          <h2>Time 1: {{p.time1}}</h2>
+          <h2>Time 2: {{p.time2}}</h2>
+          <h2>Local: {{p.local}}</h2>
+
+       
+        </button>
+        
+
+      </ion-item-sliding>
+
+      <ion-fab left bottom>
+        <button ion-button color="danger" (click)="removePartida(partida.id)">
+          <ion-icon name="trash"></ion-icon>
+        </button>
+    </ion-fab>
+    </ion-list>
+        
+
+    <ion-fab right bottom>
+        <button ion-fab color="light" (click)="addPartida()">
+          <ion-icon name="add"></ion-icon>
+        </button>
+    </ion-fab>
+  </ion-content>
